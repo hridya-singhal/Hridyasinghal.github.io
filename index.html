@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,200&display=swap');
+
+        . fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 35px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+
+        . fa-facebook {
+            background: #3B5998;
+            color: white;
+            border-radius: 50%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+        }
+
+        body {
+
+            background: url("https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            height: 100vh;
+            width: 100vw;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+        }
+
+        #list1 {
+            text-align: center;
+            background: rgba(0, 0, 0, 0, 5);
+
+        }
+
+        p {
+            display: inline-block;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding: 20px 70px;
+            color: white;
+            font-weight: 600;
+            margin: 0 0px;
+            font-family: sans-serif;
+        }
+
+        .q {
+            border-right: 1px solid rgb(230, 222, 222);
+        }
+
+        #screen {
+
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.5);
+
+        }
+
+        h1 {
+
+            margin: 10% 34%;
+            font-size: 90px;
+            letter-spacing: 10px;
+            text-transform: capitalize;
+            word-spacing: 5px;
+            color: whitesmoke;
+
+        }
+
+
+
+        . bt1 {
+            height: 70px;
+            width: 200px;
+            position: absolute;
+            left: 38%;
+
+            font-size: 30px;
+            background-color: transparent;
+            color: whitesmoke;
+            font-weight: 700;
+            font-family: sans-serif;
+
+        }
+
+        .bt1:hover {
+            background-color: #35A2C8;
+            border-radius: 40px;
+        }
+
+        #log1 {
+            height: 300px;
+            width: 500px;
+            border: 2px solid white;
+            position: absolute;
+            bottom: 400px;
+            left: 32%;
+            display: none;
+        }
+
+        label {
+            font-size: 30px;
+            text-transform: capitalize;
+            color: white;
+
+        }
+
+        input {
+            height: 40px;
+            width: 270px;
+            margin-left: 50px;
+            background-color: transparent;
+            border: 2px solid white;
+            font-size: 25px;
+            color: white;
+            border-radius: 40px;
+            padding-left: 30px;
+
+        }
+
+        input::placeholder {
+            color: white;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+
+        # i1 {
+            margin-left: 53px;
+            margin-top: 20px;
+        }
+
+        #v1 {
+            height: 60px;
+            width: 150px;
+            font-size: 20px;
+            background-color: rgba(255, 255, 255, 0.883);
+            color: black;
+            border-radius: 40px;
+            margin-top: 50px;
+            margin-left: 180px;
+        }
+
+        #log1 {
+            padding: 70px 100px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        #w1 {
+            margin-left: 300px;
+
+        }
+
+        . btn {
+            background-color: transparent;
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            font-size: 30px;
+            cursor: pointer;
+            position: relative;
+            left: 195px;
+            bottom: 233px;
+
+        }
+
+        #box1 {
+            height: 400px;
+            width: 350px;
+border-radius: 40px;
+            background: url("https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            margin: 100px 60px;
+            margin-left: 130px;
+        }
+
+        #box2 {
+            border-radius: 40px;
+            height: 400px;
+            width: 350px;
+            background: url("https://images.pexels.com/photos/3408354/pexels-photo-3408354.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            margin: 100px 60px;
+        }
+
+        # box3 {
+            border-radius: 40px;
+            height: 400px;
+            width: 350px;
+            background: url("https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            margin: 100px 60px;
+        }
+
+        #box4 {
+            border-radius: 40px;
+            height: 400px;
+            width: 350px;
+            background: url("https://images.pexels.com/photos/8537135/pexels-photo-8537135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            margin: 100px 60px;
+        }
+
+        #box5 {
+            border-radius: 40px;
+            height: 400px;
+            width: 350px;
+            background: url("https://images.pexels.com/photos/237211/pexels-photo-237211.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            margin: 100px 60px;
+            margin-left: 130px;
+        }
+
+        #box6 {
+            border-radius: 40px;
+            height: 400px;
+            width: 350px;
+            background: url("https://images.pexels.com/photos/462671/pexels-photo-462671.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            margin: 100px 60px;
+        }
+
+        #box7 {
+            border-radius: 40px;
+            height: 400px;
+            width: 350px;
+            background: url("https://images.pexels.com/photos/1878293/pexels-photo-1878293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            margin: 100px 60px;
+        }
+
+        #box8 {
+            border-radius: 40px;
+            height: 400px;
+            width: 350px;
+            background: url("https://images.pexels.com/photos/6536034/pexels-photo-6536034.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            margin: 100px 60px;
+        }
+
+        #box9 {
+            border-radius: 40px;
+            height: 400px;
+            width: 350px;
+            background: url("https://images.pexels.com/photos/236294/pexels-photo-236294.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            margin: 100px 60px;
+            margin-left: 130px;
+        }
+
+        #box10 {
+            border-radius: 40px;
+            height: 400px;
+            width: 350px;
+            background: url("https://images.pexels.com/photos/3540318/pexels-photo-3540318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            margin: 100px 60px;
+        }
+
+        #box11 {
+            border-radius: 40px;
+            height: 400px;
+            width: 350px;
+            background: url("https://images.pexels.com/photos/2406731/pexels-photo-2406731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            margin: 100px 60px;
+        }
+
+        #box12 {
+            border-radius: 40px;
+            height: 400px;
+            width: 350px;
+            background: url("https://images.pexels.com/photos/935474/toronto-beauty-clouds-skyline-935474.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            background-position: center;
+            border: 2px solid white;
+            margin: 100px 60px;
+        }
+
+
+        # inner1 {
+            border-radius: 40px;
+            height: 400px;
+            width: 350px;
+            position: absolute;
+            text-align: center;
+            overflow: hidden;
+
+        }
+
+        #outer1 {
+            display: flex;
+            position: relative;
+
+        }
+
+        #outer2 {
+            display: flex;
+            position: relative;
+
+        }
+
+        #outer3 {
+            display: flex;
+            position: relative;
+
+        }
+
+        #inner1:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        #tex1 {
+            position: relative;
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.7);
+            left: 300px;
+            font-weight: 900px;
+
+        }
+
+        # inner1  p {
+            position: relative;
+            bottom: 40px;
+            left: 300px;
+            font-size: 18px;
+        }
+
+        # inner1 : hover  p {
+            transition: all 1s;
+            left: 0px;
+        }
+
+        # inner1 : hover  h1 {
+            transition: all 1s;
+            left: 0px;
+
+        }
+
+        #inner1 button {
+            height: 60px;
+            width: 120px;
+            position: relative;
+            bottom: 50px;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: black;
+            font-size: 20px;
+            color: white;
+            left: 300px;
+            border-radius: 40px;
+        }
+
+        #inner1:hover button {
+            background-color: #35A2C8;
+            left: 0px;
+            transition: all 1s;
+            left: 0px;
+        }
+
+        #screen2 {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+            border-radius: 50%;
+        }
+
+        . fa-linkedin {
+            background: #007bb5;
+            color: white;
+            border-radius: 50%;
+        }
+
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+            border-radius: 50%;
+        }
+
+        . fa-instagram {
+            background: #125688;
+            color: white;
+            border-radius: 50%;
+        }
+
+
+        #ico1 {
+            position: relative;
+            bottom: 350px;
+            left: 20px;
+            position: fixed;
+            border-radius: 35PX;
+        height: 400px;
+        width: 80px;
+
+
+        }
+    a:hover{
+        transform: scale(1.5);
+        transition: all 0.4s;
+        }
+        #copy{
+            width: 100%;
+            height: 70px;
+            background:rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        #copy p{
+            color: whitesmoke;
+            text-transform: capitalize;
+        }
+        #head1{
+            font-family: 'Roboto', sans-serif;
+            width: 0ch;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 10px solid rgba(0, 0, 0, 0.7);
+            animation: h 2s steps(13) alternate infinite;
+
+        }
+        @keyframes h {
+            0%{width: 0ch;}
+           100%{width: 13ch;}
+        }
+        .q:hover{
+            background-color: #35A2C8;
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="screen">
+
+            <div id="list1">
+
+<p class="q" style="border-left: 2px solid white;">home</p>
+                <p class="q">about</p>
+                <p class="q">special offers</p>
+                <p class="q">blog</p>
+                <p class="q">contact</p>
+                <h1 id="head1">drift to fun</h1>
+                <div id="icon"></div>
+
+            </div>
+            <div id="ico1">
+                <a href="#" class="fa fa-facebook"></a><br>
+                <a href="#" class="fa fa-twitter"></a><br>
+                <a href="#" class="fa fa-linkedin"></a><br>
+                <a href="#" class="fa fa-youtube"></a><br>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+
+            <button class="bt1" onclick="show()">log-in</button>
+            <button class="bt1" id="w1">sign-in</button>
+            <div id="log1">
+                <form action="">
+                <label>username</label><input type="text" placeholder="Enter Name"><br>
+                <label>password</label><input type="password" placeholder="Enter password" id="i1">
+                <button id="v1">Submit</button>
+                <button id="bt0" class="btn" onclick="clo1()"><i class="fa fa-close"></i></button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div id="screen2">
+        <div id="outer1">
+            <div id="box1">
+                <div id="inner1">
+                    <h1 id="tex1">india</h1>
+                    < P > lorem, very carrots enhanced rebates. Was selected as some of the very laborious
+                        for it is, sort of no pain, we draw? </ P >
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <div id="box2">
+                <div id="inner1">
+                    <h1 id="tex1">japan</h1>
+                    < P > lorem, very carrots enhanced rebates. Was selected as some of the very laborious
+                        for it is, sort of no pain, we draw? </ P >
+                    <button>Book Now</button>
+                </div>
+            </div>
+            <div id="box3">
+                <div id="inner1">
+                    <h1 id="tex1">china</h1>
+                    < P > lorem, very carrots enhanced rebates. Was selected as some of the very laborious
+                        for it is, sort of no pain, we draw? </ P >
+                    <button>Book Now</button>
+                </div>
+            </div>
+            <div id="box4">
+                <div id="inner1">
+                    <h1 id="tex1">new york</h1>
+                    < P > lorem, very carrots enhanced rebates. Was selected as some of the very laborious
+                        for it is, sort of no pain, we draw? </ P >
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div id="outer2">
+            <div id="box5">
+                <div id="inner1">
+                    <h1 id="tex1">south korea</h1>
+                    < P > lorem, very carrots enhanced rebates. Was selected as some of the very laborious
+                        for it is, sort of no pain, we draw? </ P >
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <div id="box6">
+                <div id="inner1">
+                    <h1 id="tex1" style="color: white;">malasia</h1>
+                    < P > lorem, very carrots enhanced rebates. Was selected as some of the very laborious
+                        for it is, sort of no pain, we draw? </ P >
+                    <button>Book Now</button>
+                </div>
+            </div>
+            <div id="box7">
+                <div id="inner1">
+                    <h1 id="tex1">austrailia</h1>
+                    < P > lorem, very carrots enhanced rebates. Was selected as some of the very laborious
+                        for it is, sort of no pain, we draw? </ P >
+                    <button>Book Now</button>
+                </div>
+            </div>
+            <div id="box8">
+                <div id="inner1">
+                    <h1 id="tex1">dubai</h1>
+                    < P > lorem, very carrots enhanced rebates. Was selected as some of the very laborious
+                        for it is, sort of no pain, we draw? </ P >
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div id="outer3">
+            <div id="box9">
+                <div id="inner1">
+                    <h1 id="tex1">russia</h1>
+                    < P > lorem, very carrots enhanced rebates. Was selected as some of the very laborious
+                        for it is, sort of no pain, we draw? </ P >
+                    <button>Book Now</button>
+                </div>
+            </div>
+
+            <div id="box10">
+                <div id="inner1">
+                    <h1 id="tex1">egypt</h1>
+                    < P > lorem, very carrots enhanced rebates. Was selected as some of the very laborious
+                        for it is, sort of no pain, we draw? </ P >
+                    <button>Book Now</button>
+                </div>
+            </div>
+            <div id="box11">
+                <div id="inner1">
+                    <h1 id="tex1">abu dhabi</h1>
+                    < P > lorem, very carrots enhanced rebates. Was selected as some of the very laborious
+                        for it is, sort of no pain, we draw? </ P >
+                    <button>Book Now</button>
+                </div>
+            </div>
+            <div id="box12">
+                <div id="inner1">
+                    <h1 id="tex1">canada</h1>
+                    < P > lorem, very carrots enhanced rebates. Was selected as some of the very laborious
+                        for it is, sort of no pain, we draw? </ P >
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="copy">
+<p>copyright &copy 2010-2021,All Right Reseved</p>
+</div>
+    <script>
+
+        function  show ( )  {
+            document.getElementById("log1").style.display = "block";
+        }
+        function clo1() {
+            document.getElementById("log1").style.display = "none";
+        }
+    </script>
+</body>
+
+</html> 
